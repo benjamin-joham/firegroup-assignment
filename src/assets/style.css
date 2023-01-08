@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Trade Gothic LT';
+  src: local('Trade Gothic LT'),
+    url('~@/assets/font/Trade\ Gothic\ LT.ttf') format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Trade Gothic LT Bold';
+  src: local('Trade Gothic LT Bold'),
+    url('~@/assets/font/Trade\ Gothic\ LT\ Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Trade Gothic LT Light';
+  src: local('Trade Gothic LT Light'),
+    url('~@/assets/font/Trade\ Gothic\ LT\ Light.ttf') format('truetype');
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Minion Pro Regular';
+  src: local('Minion Pro Regular'),
+    url('~@/assets/font/Minion\ Pro\ Regular.ttf') format('truetype');
+  font-weight: normal;
+}

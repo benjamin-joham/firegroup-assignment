@@ -1,33 +1,31 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="./assets/logo.svg"
-      width="125"
-      height="125"
-    />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+  <header class="container bg-white">
+    <SystemBar />
+    <NavBar />
   </header>
 
-  <main>
+  <!-- <main>
     <TheWelcome />
-  </main>
+  </main> -->
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<script setup lang="ts">
+import { defineComponent } from 'vue'
+import NavBar from './components/Header/NavBar.vue'
+import SystemBar from './components/Header/SystemBar.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+// import TheWelcome from './components/TheWelcome.vue'
+defineComponent({
+  name: 'App',
+  components: {
+    NavBar,
+    SystemBar,
+  },
+})
+</script>
 
+<style scoped>
+/* 
 .logo {
   display: block;
   margin: 0 auto 2rem;
@@ -49,5 +47,5 @@ header {
     place-items: flex-start;
     flex-wrap: wrap;
   }
-}
+} */
 </style>
