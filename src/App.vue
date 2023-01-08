@@ -1,8 +1,10 @@
 <template>
+  <!-- <img src="@/assets/Layout.png" alt="" /> -->
   <header class="container bg-white">
     <SystemBar />
     <NavBar />
   </header>
+  <HeroWrapper />
 
   <!-- <main>
     <TheWelcome />
@@ -13,6 +15,7 @@
 import { defineComponent } from 'vue'
 import NavBar from './components/Header/NavBar.vue'
 import SystemBar from './components/Header/SystemBar.vue'
+import HeroWrapper from './components/HeroWrapper.vue'
 // import HelloWorld from './components/HelloWorld.vue'
 // import TheWelcome from './components/TheWelcome.vue'
 defineComponent({
