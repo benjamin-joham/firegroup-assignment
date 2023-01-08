@@ -46,6 +46,9 @@ const getFirstNavItemsHalf = (first: boolean = true) => {
 </script>
 
 <style scoped>
+a {
+  font-weight: bold;
+}
 img {
   width: 16em;
 }

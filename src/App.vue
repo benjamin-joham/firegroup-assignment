@@ -4,11 +4,10 @@
     <SystemBar />
     <NavBar />
   </header>
-  <HeroWrapper />
 
-  <!-- <main>
-    <TheWelcome />
-  </main> -->
+  <main>
+    <HeroWrapper />
+  </main>
 </template>
 
 <script setup lang="ts">
@@ -23,7 +22,11 @@ defineComponent({
   components: {
     NavBar,
     SystemBar,
+    // ProductDetails,
   },
+  // setup(props, ctx) {
+
+  // },
 })
 </script>
 
