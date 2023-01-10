@@ -44,3 +44,9 @@ npm run build
 ```sh
 npm run lint
 ```
+
+# TODOs
+
+[] For Men's => For Men | Men's
+[] T/F => +41 58  (Service number)
+[] T/F => +41 43 (Zürich)

@@ -1,5 +1,5 @@
 <template>
-  <div class="hstack gap-4 mt-2">
+  <div class="hstack gap-4 mt-2 container">
     <img src="../../assets/icon/Contact.png" alt="Contact logo" />
     <img src="../../assets/icon/Stores.png" alt="Stores logo" />
     <img src="../../assets/icon/Language.png" alt="Language logo" />
@@ -11,21 +11,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { defineComponent } from 'vue'
-
-defineComponent({
-  name: 'SystemBar',
-  components: {},
-  data() {
-    return {
-      msg: 'super awesome',
-      list: [0, 1, 2],
-    }
-  },
-})
-</script>
 
 <style scoped>
 img {

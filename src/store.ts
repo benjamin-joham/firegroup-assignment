@@ -6,6 +6,9 @@ const product = products[0]
 const priceData = productPrices[0]
 export type Product = typeof product
 export type Price = typeof priceData
+export type ProductWithPrice = Product & {
+  price: Price['price']
+}
 
 export interface State {
   products: Product[]
@@ -16,6 +19,7 @@ export interface State {
   getFormattedProductPrice: (sku: Product['sku']) => string
   getProductPrice: (sku: Product['sku']) => Price['price']
   getProduct: (sku: Product['sku']) => Product
+  thumbnails: string[]
 }
 
 const getPriceProduct = (sku: Product['sku']): Price => {
@@ -40,6 +44,12 @@ const getProduct = (sku: Product['sku']): Product => {
   return products.find((x) => x.sku === sku) as Product
 }
 
+const thumbnails = reactive([
+  'thumb_ultimate.png',
+  'thumb_ultimate-01.png',
+  'thumb_ultimate-02.png',
+])
+
 export const state = reactive<State>({
   products,
   productPrices,
@@ -51,4 +61,5 @@ export const state = reactive<State>({
   getFormattedProductPrice,
   getProductPrice,
   getProduct,
+  thumbnails,
 })

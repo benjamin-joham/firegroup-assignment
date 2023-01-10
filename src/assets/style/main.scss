@@ -1,4 +1,25 @@
 @import './base.scss';
+
+.category {
+  color: var(--color-accent);
+  display: block;
+  font-size: 0.9em;
+  font-family: 'Trade Gothic LT Bold';
+  margin-bottom: 1em;
+}
+
+.data {
+    &-details {
+        &:nth-child(5), &:nth-child(6) {
+            border-bottom: none !important;
+        }
+    }
+    &-specs {
+        &:nth-child(7), &:nth-child(8) {
+            border-bottom: none !important;
+        }
+    }
+}
 // $enable-cssgrid: true;
 // #app {
 //   font-family: 'Minion Pro Regular';

@@ -1,29 +1,54 @@
 <template>
-  <!-- <img src="@/assets/Layout.png" alt="" /> -->
-  <header class="container bg-white">
-    <SystemBar />
-    <NavBar />
+  <header class="container">
+    <Header />
   </header>
 
   <main>
-    <HeroWrapper />
-    <div class="my-5">
+    <section id="hero" class="container-fluid py-5">
+      <HeroWrapper />
+    </section>
+    <section id="productDetails" class="container my-5 py-5">
       <ProductDetails :details="data?.productDetails" />
+    </section>
+
+    <section id="productSpecifications" class="container my-5 py-5">
       <ProductSpecifications :details="data?.productSpecifications" />
-    </div>
-    <RelatedProducts />
+    </section>
+
+    <section id="relatedPieces" class="container-fluid my-5 py-5">
+      <RelatedProducts />
+    </section>
   </main>
+  <footer class="container my-5 py-5">
+    <Footer />
+  </footer>
 </template>
 
 <script setup lang="ts">
-import NavBar from './components/Header/NavBar.vue'
-import SystemBar from './components/Header/SystemBar.vue'
-import HeroWrapper from './components/HeroWrapper.vue'
-import ProductDetails from './components/ProductDetails.vue'
-import ProductSpecifications from './components/ProductSpecifications.vue'
-import RelatedProducts from './components/RelatedProducts.vue'
 import { state } from './store'
+import Footer from './components/Footer.vue'
+import Header from './components/Header/Header.vue'
+import HeroWrapper from './components/Hero/HeroWrapper.vue'
+import ProductDetails from './components/Product/ProductDetails.vue'
+import ProductSpecifications from './components/Product/ProductSpecifications.vue'
+import RelatedProducts from './components/Product/RelatedProducts.vue'
 
-const data = state.products.find(({ isActive }) => isActive) || null
-state.setActiveProduct(data)
+const data = state.products.find(({ isActive }) => isActive)
+state.setActiveProduct(data!)
 </script>
+
+<style scoped>
+header {
+  background-color: var(--color-background);
+}
+
+#hero {
+  background-color: var(--color-background-hero);
+  max-width: 1440px;
+}
+
+#relatedPieces {
+  background-color: var(--color-background-related-pieces);
+  max-width: 1440px;
+}
+</style>
