@@ -1,16 +1,62 @@
 @import './base.css';
-/* @import './style.css'; */
-
+$enable-cssgrid: true;
 #app {
-  /* max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem; */
-
   font-family: 'Minion Pro Regular';
-  span {
-    font-family: 'Trade Gothic LT';
-    color: rgb(202, 162, 92);
+  h1 {
+    font-size: 3.5em;
+    color: black;
   }
+
+  span {
+    color: rgb(202, 162, 92);
+    &.category {
+      display: block;
+      font-size: 0.8em;
+      font-family: 'Trade Gothic LT Bold';
+      margin-bottom: 1em;
+    }
+    &.characteristics {
+    }
+  }
+
+  button {
+  font-family: 'Trade Gothic LT Bold';
+  background-color: rgb(202, 162, 92);
+    font-size: small;
+    display: inline-flex;
+    vertical-align: middle;
+    padding: 0.5rem 1rem;
+    border: none;
+    color: white;
+  }
+
+  p {
+
+    &.price {
+      color: rgb(202, 162, 92);
+      margin-bottom: 1em;
+      font-family: 'Minion Pro Regular';
+    }
+
+    &.sku {
+      font-size: 0.5rem;
+    font-family: 'Trade Gothic LT Light';
+    // font-family: 'Trade Gothic LT Light';
+      margin: 0;
+    }
+
+    &.description {
+      font-family: 'Minion Pro Regular';
+      // font-size: 1.2rem;
+      padding-right: 1rem;
+      margin: 0.5rem 0 1.5rem 0;
+    }
+  }
+}
+
+.lt-bold {
+  font-family: 'Trade Gothic LT Bold';
+
 }
 
 a,

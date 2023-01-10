@@ -2,19 +2,19 @@
   <section id="details">
     <div class="container">
       <div class="row">
-        <div class="col-8 ps-0">
-          <div>
-            <span class="category">Product Details</span>
-            <h2>{{ details.title }}</h2>
-          </div>
-          <ProductDataList />
-        </div>
-        <div class="col-4 pe-0">
+        <div class="col-4 ps-0">
           <img
             class="product bg-black"
-            src="@/assets/img/product-detail.png"
+            src="@/assets/img/specification.png"
             alt="Product Detail"
           />
+        </div>
+        <div class="col-8 pe-0">
+          <div>
+            <span class="category">Specifications</span>
+            <h2>{{ details.title }}</h2>
+          </div>
+          <ProductDataList :specifications="true" />
         </div>
       </div>
     </div>
@@ -24,7 +24,7 @@
 <script lang="ts">
 import ProductDataList from './ProductDataList.vue'
 export default {
-  name: 'ProductDetails',
+  name: 'ProductSpecifications',
   props: {
     details: {
       type: Object,

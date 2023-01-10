@@ -7,30 +7,48 @@
 
   <main>
     <HeroWrapper />
+    <div class="my-5">
+      <ProductDetails :details="activeProduct?.productDetails" />
+      <ProductSpecifications :details="activeProduct?.productSpecifications" />
+    </div>
+    <RelatedProducts />
   </main>
 </template>
 
-<script setup lang="ts">
-import { defineComponent } from 'vue'
+<script lang="ts">
 import NavBar from './components/Header/NavBar.vue'
 import SystemBar from './components/Header/SystemBar.vue'
 import HeroWrapper from './components/HeroWrapper.vue'
+import ProductDetails from './components/ProductDetails.vue'
+import ProductSpecifications from './components/ProductSpecifications.vue'
+import RelatedProducts from './components/RelatedProducts.vue'
+import { type State, state } from './store'
 // import HelloWorld from './components/HelloWorld.vue'
 // import TheWelcome from './components/TheWelcome.vue'
-defineComponent({
+export default {
   name: 'App',
   components: {
+    HeroWrapper,
     NavBar,
     SystemBar,
-    // ProductDetails,
+    RelatedProducts,
+    ProductDetails,
+    ProductSpecifications,
   },
-  // setup(props, ctx) {
-
-  // },
-})
+  setup(): Pick<State, 'activeProduct'> {
+    const data = state.products.find(({ isActive }) => isActive) || null
+    state.setActiveProduct(data)
+    return {
+      activeProduct: state.activeProduct,
+    }
+  },
+}
 </script>
 
 <style scoped>
+header {
+  padding: 0 8%;
+}
 /* 
 .logo {
   display: block;
