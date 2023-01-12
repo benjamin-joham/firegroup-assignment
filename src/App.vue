@@ -4,7 +4,7 @@
   </header>
 
   <main>
-    <section id="hero" class="container-fluid py-5">
+    <section id="hero" class="mx-3 py-5">
       <HeroWrapper />
     </section>
     <section id="productDetails" class="container my-5 py-5">
@@ -15,7 +15,7 @@
       <ProductSpecifications :details="data?.productSpecifications" />
     </section>
 
-    <section id="relatedPieces" class="container-fluid my-5 py-5">
+    <section id="relatedPieces" class="my-5 py-5 mx-3">
       <RelatedProducts />
     </section>
   </main>
@@ -44,11 +44,11 @@ header {
 
 #hero {
   background-color: var(--color-background-hero);
-  max-width: 1440px;
+  /* max-width: 1440px; */
 }
 
 #relatedPieces {
   background-color: var(--color-background-related-pieces);
-  max-width: 1440px;
+  /* max-width: 1440px; */
 }
 </style>

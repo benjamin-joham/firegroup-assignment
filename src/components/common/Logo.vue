@@ -1,6 +1,6 @@
 <template>
   <img
-    :class="small ? 'small mb-4' : 'brand mb-3 navbar-brand mx-auto'"
+    :class="small ? 'small' : 'brand'"
     src="@/assets/logo.png"
     alt="Brand Logo"
   />

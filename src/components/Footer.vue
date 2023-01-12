@@ -2,9 +2,9 @@
   <div class="row contact justify-content-between">
     <div class="col-2 row flex-column">
       <Logo small />
-      <p class="mb-3">Walcherstrasse 9</p>
+      <p class="mt-4 mb-3">Walcherstrasse 9</p>
       <p>8006 Zürich</p>
-      <div class="mt-5">
+      <div class="mt-4">
         <div class="phone mb-2 d-flex align-items-center">
           <p class="pe-4 type">T</p>
           <p>+41 (0) 10 20 30 40</p>

@@ -4,9 +4,11 @@
       <li
         v-for="item in data"
         :key="item.title"
-        class="item d-inline-block fw-bold bg-black"
+        class="item d-inline-block fw-bold"
       >
-        <div class="d-flex flex-column align-items-center">
+        <div
+          class="d-flex flex-column align-items-center bg-black slider-wrapper"
+        >
           <SliderItem :item="item" />
         </div>
       </li>
@@ -58,8 +60,12 @@ onMounted(() => {
 
   &:after {
     right: 0;
-    background: linear-gradient(-90deg, black, transparent);
-    width: 150px;
+    background: linear-gradient(
+      -90deg,
+      var(--color-background-related-pieces),
+      transparent 70%
+    );
+    width: 100px;
   }
 
   .items {
@@ -79,6 +85,10 @@ onMounted(() => {
 
       &:last-child {
         margin-right: 50px;
+      }
+
+      .slider-wrapper {
+        margin-top: 80px;
       }
     }
   }

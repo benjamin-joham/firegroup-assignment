@@ -4,7 +4,7 @@
       <li v-for="item in getFirstNavItemsHalf()" :key="item" class="nav-item">
         <a href="#" class="nav-text"> {{ item.toUpperCase() }}</a>
       </li>
-      <li class="nav-item mx-2">
+      <li class="navbar-brand mx-2">
         <Logo />
       </li>
       <li
@@ -33,23 +33,3 @@ const getFirstNavItemsHalf = (first: boolean = true) => {
   return navItems.filter((_item, idx) => (first ? idx < 3 : idx > 2))
 }
 </script>
-
-<style scoped lang="scss">
-.nav-item {
-  &:nth-of-type(2):hover {
-    color: blue;
-  }
-}
-.nav-text {
-  // font-weight: bold;
-  font-size: 1rem;
-  // color: var(--color-links);
-
-  // &:nth-child(1):hover {
-  //   color: red;
-  // }
-  // &:hover {
-  //   color: var(--color-accent);
-  // }
-}
-</style>

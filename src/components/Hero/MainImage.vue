@@ -1,5 +1,5 @@
 <template>
-  <div class="image-wrapper mw-100">
+  <div class="image-wrapper mw-100 d-flex">
     <img
       class="image"
       v-bind:src="`src/assets/img/${thumbnails[active].split('_')[1]}`"
@@ -27,7 +27,7 @@ const { thumbnails } = state
   transform: translateX(-5%);
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
   .image-wrapper {
     height: 450px;
   }
