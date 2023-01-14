@@ -145,45 +145,12 @@ table {
   --color-text-white: #ffffff;
   --color-text-related-sku: rgb(128, 128, 128);
   --color-text-additional-links: rgb(160, 160, 160);
-
-  --breakpoint-lg: 992px;
-
-  /* --section-gap: 160px; */
 }
 
-body {
-  min-height: 100vh;
-  color: var(--color-text);
-  font-family: 'Minion Pro Regular', 'Trade Gothic LT', 'Trade Gothic LT Light',
-    'Trade Gothic LT Bold';
-  font-size: 16px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-a {
-  text-decoration: none;
-  color: var(--color-links);
-  &:hover {
-    color: var(--color-accent) !important;
-  }
-}
 
-h1,
-h2 {
-  color: var(--color-heading);
-}
-
-h1 {
-  font-size: 3.5rem;
-}
-
-h2 {
-  font-size: 2.5rem;
-  color: var(--color-heading);
-}
 
 /*
+* Text Categories Helper
 Hero:
 - Category: Gothic, accent
 - Title: Minion, heading

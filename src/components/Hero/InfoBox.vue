@@ -1,18 +1,16 @@
 <template>
-  <div class="infobox">
-    <span class="category">
-      {{ `${activeProduct?.category.toUpperCase()} WATCHES` }}
+  <div class="infobox py-md-5">
+    <span class="category text-uppercase">
+      {{ `${activeProduct?.category} WATCHES` }}
     </span>
-    <h1 class="title">{{ activeProduct?.title }}</h1>
-    <div class="extras">
+    <h1 class="title mb-1 mb-md-0">{{ activeProduct?.title }}</h1>
+    <div class="extras ms-0 ms-md-2 ms-lg-5">
       <p class="price">
         {{ getFormattedProductPrice(activeProduct?.sku || '') }}
       </p>
       <p class="sku">Watch {{ activeProduct?.sku }}</p>
       <p class="description">{{ activeProduct?.shortDescription }}</p>
-      <button class="cta">
-        {{ `${'Add to Shopping Bag'.toUpperCase()}` }}
-      </button>
+      <button class="cta text-uppercase">Add to Shopping Bag</button>
     </div>
   </div>
 </template>
@@ -25,15 +23,7 @@ const { activeProduct, getFormattedProductPrice } = state
 
 <style scoped lang="scss">
 .infobox {
-  padding: 50px 0;
-
-  // .category {
-  //   color: var(--color-accent);
-  //   display: block;
-  //   font-size: 0.8em;
-  //   font-family: 'Trade Gothic LT Bold';
-  //   margin-bottom: 1em;
-  // }
+  // padding: 50px 0;
 
   .title {
     padding-right: 5rem;
@@ -70,6 +60,19 @@ const { activeProduct, getFormattedProductPrice } = state
       border: none;
       color: var(--color-text-white);
     }
+  }
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  .title {
+    padding-right: 0;
+  }
+
+  .infobox .extras .description {
+    font-size: 1rem;
   }
 }
 </style>

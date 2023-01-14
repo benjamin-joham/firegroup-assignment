@@ -1,14 +1,18 @@
 <template>
-  <div class="thumbnails row-expand h-100">
-    <div class="vstack gap-3 h-75 justify-content-center">
-      <img
+  <div class="thumbnails">
+    <div class="h-md-75 d-flex h-100 flex-md-column justify-content-center">
+      <div
+        class="d-inline-flex justify-content-center d-md-block my-md-2"
         v-for="(thumbnail, idx) in thumbnails"
         :key="idx"
         @click="handleChange(idx)"
-        v-bind:src="`src/assets/img/${thumbnail}`"
-        alt="Thumbnail Ultimate 1"
-        :style="{ opacity: idx === active ? 1 : 0.5 }"
-      />
+      >
+        <img
+          v-bind:src="`src/assets/img/${thumbnail}`"
+          alt="Thumbnail Ultimate 1"
+          :style="{ opacity: idx === active ? 1 : 0.5 }"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -35,5 +39,12 @@ const handleChange = (id: number) => {
 .thumbnails img {
   width: 100%;
   background-color: var(--color-background);
+}
+
+@media (max-width: 768px) {
+  .thumbnails img {
+    width: 50%;
+    /* padding-left: 2rem; */
+  }
 }
 </style>

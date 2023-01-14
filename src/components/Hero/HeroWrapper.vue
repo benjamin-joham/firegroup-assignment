@@ -1,13 +1,15 @@
 <template>
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-1 h-100 ps-1">
+  <div :class="[viewPortClass]">
+    <div class="d-flex flex-column flex-md-row align-items-center">
+      <div
+        class="col-md-1 offset-md-1 offset-lg-0 h-100 ps-1 order-last order-md-0"
+      >
         <Thumbnails @setActive="setActive" :active="active" />
       </div>
-      <div class="col-5 h-100">
+      <div class="col-12 col-md-5 h-100">
         <MainImage :active="active" />
       </div>
-      <div class="col-6 h-100 text-start">
+      <div class="col-lg-6 col-md-5 h-100 text-start order-first order-md-0">
         <InfoBox />
       </div>
     </div>
@@ -15,13 +17,27 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 import Thumbnails from './Thumbnails.vue'
 import MainImage from './MainImage.vue'
 import InfoBox from './InfoBox.vue'
 
+const viewPortClass = ref('')
 const active = ref(0)
 const setActive = (id: number) => {
   active.value = id
 }
+const handleResize = () => {
+  console.log('resized')
+  viewPortClass.value = window.matchMedia('(max-width: 992px)').matches
+    ? 'container-fluid'
+    : 'container'
+}
+onMounted(() => {
+  handleResize()
+  window.addEventListener('resize', handleResize)
+})
+onUnmounted(() => window.removeEventListener('resize', handleResize))
 </script>
+
+<style lang="ts"></style>
