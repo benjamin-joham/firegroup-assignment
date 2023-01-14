@@ -6,8 +6,8 @@
     alt=""
   />
   <div class="content d-flex flex-column align-items-center">
-    <p class="p-0 mb-2 mt-3 category">
-      {{ item.category.toUpperCase() }}
+    <p class="p-0 mb-2 mt-3 category text-uppercase">
+      {{ item.category }}
     </p>
     <p class="mb-1 subtitle title">{{ item.subTitle }}</p>
     <p class="p-0 mb-4 sku">Watch {{ item.sku }}</p>

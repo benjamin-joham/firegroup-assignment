@@ -7,7 +7,7 @@
     <section id="hero" class="mx-3 py-5">
       <HeroWrapper />
     </section>
-    <section id="productDetails" class="container my-5 py-5">
+    <section id="productDetails" class="container my-lg-5 py-5">
       <ProductDetails :details="data?.productDetails" />
     </section>
 

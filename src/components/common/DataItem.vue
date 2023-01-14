@@ -6,7 +6,7 @@
     />
     <div class="d-flex flex-column mx-3 w-100 h-100">
       <p class="title m-0 mb-2">{{ title }}</p>
-      <p class="fw-bold text m-0">{{ text?.toUpperCase() }}</p>
+      <p class="fw-bold text m-0 text-uppercase">{{ text }}</p>
     </div>
   </div>
 </template>

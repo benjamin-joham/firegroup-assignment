@@ -18,7 +18,7 @@
     <div class="collapse navbar-collapse w-100" id="menuItems">
       <ul class="navbar-nav mx-auto">
         <li v-for="item in getFirstNavItemsHalf()" :key="item" class="nav-item">
-          <a href="#" class="nav-link"> {{ item.toUpperCase() }}</a>
+          <a href="#" class="nav-link text-uppercase"> {{ item }}</a>
         </li>
         <a href="#" class="d-none d-lg-block">
           <img class="brand" src="@/assets/logo.png" alt="Brand Logo" />
@@ -28,7 +28,7 @@
           :key="item"
           class="nav-item"
         >
-          <a href="#" class="nav-link"> {{ item.toUpperCase() }}</a>
+          <a href="#" class="nav-link text-uppercase"> {{ item }}</a>
         </li>
       </ul>
     </div>

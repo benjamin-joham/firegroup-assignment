@@ -2,7 +2,7 @@
   <nav class="navbar-expand my-4 container">
     <ul class="navbar-nav justify-content-between">
       <li v-for="item in getFirstNavItemsHalf()" :key="item" class="nav-item">
-        <a href="#" class="nav-text"> {{ item.toUpperCase() }}</a>
+        <a href="#" class="nav-text text-uppercase"> {{ item }}</a>
       </li>
       <li class="navbar-brand mx-2">
         <Logo />
@@ -12,7 +12,7 @@
         :key="item"
         class="nav-item"
       >
-        <a href="#" class="nav-text"> {{ item.toUpperCase() }}</a>
+        <a href="#" class="nav-text text-uppercase"> {{ item }}</a>
       </li>
     </ul>
   </nav>

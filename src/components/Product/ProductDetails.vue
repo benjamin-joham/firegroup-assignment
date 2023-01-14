@@ -3,7 +3,7 @@
     <div class="row justify-content-between">
       <div class="col-7 ps-0 d-flex flex-column align-items-center">
         <div class="col-10 mb-5">
-          <span class="category">Product Details</span>
+          <span class="category text-uppercase">Product Details</span>
           <h2>{{ details?.title }}</h2>
         </div>
         <div
