@@ -1,5 +1,5 @@
 <template>
-  <div class="container pe-0">
+  <div class="container pe-0 me-0">
     <div class="row me-0">
       <div class="col-md-3 col-12">
         <div
@@ -32,7 +32,7 @@
 <script lang="ts">
 import { type Price, type Product, state, type State } from '@/store'
 import { ref, type Ref } from 'vue'
-import Slider from './Slider.vue'
+import Slider from './ProductSlider.vue'
 
 type ProductWithPrice = Product & {
   price: Price['price']
@@ -131,7 +131,7 @@ export default {
 
     img {
       width: 40%;
-      transform: rotate(90deg);
+      // transform: rotate(90deg);
     }
 
     p {

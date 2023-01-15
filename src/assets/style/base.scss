@@ -75,7 +75,6 @@ footer,
 header,
 hgroup,
 menu,
-// nav,
 output,
 ruby,
 section,
@@ -101,7 +100,6 @@ footer,
 header,
 hgroup,
 menu,
-// nav,
 section {
   display: block;
 }
@@ -129,9 +127,7 @@ table {
 }
 
 @import './fonts.scss';
-// @import '../../../node_modules/bootstrap/scss/functions';
-// @import '../../../node_modules/bootstrap/scss/variables';
-// @import "../../../node_modules/bootstrap/scss/mixins";
+
 /* semantic color variables for this project */
 :root {
   --color-background: #ffffff;
@@ -146,8 +142,6 @@ table {
   --color-text-related-sku: rgb(128, 128, 128);
   --color-text-additional-links: rgb(160, 160, 160);
 }
-
-
 
 /*
 * Text Categories Helper

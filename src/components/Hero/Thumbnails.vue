@@ -44,7 +44,6 @@ const handleChange = (id: number) => {
 @media (max-width: 768px) {
   .thumbnails img {
     width: 50%;
-    /* padding-left: 2rem; */
   }
 }
 </style>

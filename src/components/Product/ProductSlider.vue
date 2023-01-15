@@ -51,21 +51,22 @@ onMounted(() => {
   &:after {
     position: absolute;
     top: 0;
+    right: 0;
     z-index: 1;
 
     content: '';
     display: block;
     height: 100%;
-  }
-
-  &:after {
-    right: 0;
     background: linear-gradient(
       -90deg,
       var(--color-background-related-pieces),
       transparent 70%
     );
     width: 100px;
+
+    @media (max-width: 576px) {
+      position: unset;
+    }
   }
 
   .items {

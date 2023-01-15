@@ -1,16 +1,7 @@
 import { createApp } from 'vue'
-import App from './App.vue'
-// import 'popper/dist/'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.js'
 import './assets/style/main.scss'
-// import './scripts/slider.js'
-// import store from './store'
+import App from './App.vue'
 
-createApp(App)
-.mount('#app')
-// .directive('scroll', {
-//     updated: (el, binding) => {
-//         console.log(binding.value)
-//     }
-// })
+createApp(App).mount('#app')

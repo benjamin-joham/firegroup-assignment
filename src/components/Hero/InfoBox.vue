@@ -23,8 +23,6 @@ const { activeProduct, getFormattedProductPrice } = state
 
 <style scoped lang="scss">
 .infobox {
-  // padding: 50px 0;
-
   .title {
     padding-right: 5rem;
   }

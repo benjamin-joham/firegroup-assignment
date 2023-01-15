@@ -1,5 +1,5 @@
 <template>
-  <ul class="row justify-content-between col-10 col-md-8 col-lg-12">
+  <ul class="row justify-content-between col-10 col-lg-12">
     <li
       v-for="(detail, idx) in productDetails"
       :key="detail?.title"
@@ -26,10 +26,9 @@ import { state } from '@/store'
 import { onMounted, onUnmounted, ref } from 'vue'
 import DataItem from './DataItem.vue'
 
-const { specifications } = defineProps<{ specifications?: boolean }>()
-console.log(specifications)
+const props = defineProps<{ specifications?: boolean }>()
 const { getIconSrc, activeProduct } = state
-const productDetails = specifications
+const productDetails = props.specifications
   ? activeProduct?.productSpecifications.data?.sort(
       (a, b) => a.sortOrder - b.sortOrder
     )

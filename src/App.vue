@@ -14,7 +14,10 @@
       <ProductDetails :details="data?.productDetails" />
     </section>
 
-    <section id="productSpecifications" class="container my-lg-5 py-3 py-md-5">
+    <section
+      id="productSpecifications"
+      class="container-fluid container-lg my-lg-5 py-3 py-md-5"
+    >
       <ProductSpecifications :details="data?.productSpecifications" />
     </section>
 
@@ -47,11 +50,9 @@ header {
 
 #hero {
   background-color: var(--color-background-hero);
-  /* max-width: 1440px; */
 }
 
 #relatedPieces {
   background-color: var(--color-background-related-pieces);
-  /* max-width: 1440px; */
 }
 </style>

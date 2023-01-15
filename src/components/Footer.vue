@@ -3,7 +3,9 @@
     <div
       class="col-xl-3 col-md-4 d-flex align-items-md-baseline align-items-center flex-column mb-md-0 mb-4 mx-auto"
     >
-      <Logo small />
+      <a href="#">
+        <img class="brand" src="@/assets/logo.png" alt="Brand Logo" />
+      </a>
       <p class="mt-4 mb-3">Walcherstrasse 9</p>
       <p>8006 Zürich</p>
       <div class="mt-4">
@@ -56,7 +58,7 @@
 </template>
 
 <script setup lang="ts">
-import Logo from './common/Logo.vue'
+import Logo from './common/BrandLogo.vue'
 const customerCare = [
   'Contact Us',
   'Track your order',
@@ -72,6 +74,9 @@ const stayInTouch = ['Sign up to our Newsletter', 'Magazine Download']
 </script>
 
 <style lang="scss">
+a > img {
+  width: 10rem;
+}
 .contact {
   color: var(--color-details);
 }
@@ -89,7 +94,6 @@ const stayInTouch = ['Sign up to our Newsletter', 'Magazine Download']
   font-family: 'Trade Gothic LT';
 
   .column-title {
-    /* font-size: 1.2rem; */
     font-family: 'Trade Gothic LT Bold';
     color: var(--color-details);
   }

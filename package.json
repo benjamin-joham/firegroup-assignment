@@ -1,6 +1,6 @@
 {
-  "name": "the-branding",
-  "version": "0.0.0",
+  "name": "firegroup-assignment_the-branding",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "vite",
