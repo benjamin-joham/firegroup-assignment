@@ -58,7 +58,6 @@
 </template>
 
 <script setup lang="ts">
-import Logo from './common/BrandLogo.vue'
 const customerCare = [
   'Contact Us',
   'Track your order',

@@ -81,9 +81,6 @@ img {
       top: 0;
     }
   }
-  &.small {
-    width: 11rem;
-  }
 }
 
 a {
