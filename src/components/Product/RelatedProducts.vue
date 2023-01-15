@@ -131,7 +131,6 @@ export default {
 
     img {
       width: 40%;
-      // transform: rotate(90deg);
     }
 
     p {
