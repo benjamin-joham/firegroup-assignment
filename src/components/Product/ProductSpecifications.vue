@@ -1,34 +1,3 @@
-<!-- <template>
-  <div class="container-fluid container-md">
-    <div
-      class="row flex-column flex-md-row justify-content-center justify-content-md-start align-items-center align-items-md-baseline"
-    >
-      <div
-        class="col-7 ps-0 pe-0 pe-md-1 d-flex flex-column align-items-lg-center"
-      >
-        <div class="col-lg-10 mb-5">
-          <span class="category text-uppercase">Product Details</span>
-          <h2>{{ details?.title }}</h2>
-        </div>
-        <div
-          class="row-expand justify-content-between align-self-baseline w-100"
-        >
-          <DataList />
-        </div>
-      </div>
-      <div
-        class="col-7 col-md-2 col-lg-4 offset-md-0 offset-xl-1 pe-0 text-md-end my-auto ms-5"
-      >
-        <img
-          class="product bg-black"
-          src="@/assets/img/product-detail.png"
-          alt="Product Detail"
-        />
-      </div>
-    </div>
-  </div>
-</template> -->
-
 <template>
   <div class="container-fluid container-md">
     <div
