@@ -1,5 +1,5 @@
 <template>
-  <div class="container pe-0 me-0">
+  <div class="container pe-0">
     <div class="row me-0">
       <div class="col-md-3 col-12">
         <div

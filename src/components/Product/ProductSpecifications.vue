@@ -35,7 +35,7 @@
       class="row row-lg-expanded flex-column flex-md-row justify-content-center justify-content-md-between align-items-center align-items-md-baseline"
     >
       <div
-        class="col-7 col-lg-3 offset-md-0 offset-xl-1 px-0 text-md-end my-auto ms-md-5 d-flex d-md-block justify-content-center order-last order-md-first"
+        class="col-7 col-md-3 offset-md-0 offset-xl-1 px-0 text-md-end my-auto ms-lg-5 d-flex d-md-block justify-content-center order-last order-md-first"
       >
         <img
           class="product bg-black"

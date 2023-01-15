@@ -19,7 +19,7 @@
         </div>
       </div>
       <div
-        class="col-7 col-md-3 col-lg-4 offset-md-0 offset-xl-1 px-0 text-md-end my-auto ms-md-5 d-flex d-md-block justify-content-center"
+        class="col-7 col-md-3 col-xxl-4 offset-md-0 offset-xl-1 px-0 text-md-end my-auto ms-md-5 d-flex d-md-block justify-content-center"
       >
         <img
           class="product bg-black"
