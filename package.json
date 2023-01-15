@@ -2,6 +2,11 @@
   "name": "firegroup-assignment_the-branding",
   "version": "0.0.1",
   "private": true,
+  "engineStrict": true,
+  "engines": {
+    "node": ">=19.2.0",
+    "npm": "~9.2.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
