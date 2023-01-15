@@ -11,11 +11,12 @@
       <div class="mt-4">
         <div class="phone mb-2 d-flex align-items-center">
           <p class="pe-4 type">T</p>
-          <p>+41 (0) 10 20 30 40</p>
+          <p>+41 (0) 44 100 20 30</p>
+          <!-- 044 Vorwahl Zürich -->
         </div>
         <div class="phone mb-2 d-flex align-items-center">
           <p class="pe-4 type">F</p>
-          <p>+41 (0) 50 60 70 80</p>
+          <p>+41 (0) 44 500 60 70</p>
         </div>
         <div class="phone mb-2 d-flex align-items-center">
           <p class="pe-4 type">M</p>
