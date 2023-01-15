@@ -1,6 +1,8 @@
 <template>
   <div class="row contact justify-content-between">
-    <div class="col-2 row flex-column">
+    <div
+      class="col-xl-3 col-md-4 d-flex align-items-md-baseline align-items-center flex-column mb-md-0 mb-4 mx-auto"
+    >
       <Logo small />
       <p class="mt-4 mb-3">Walcherstrasse 9</p>
       <p>8006 Zürich</p>
@@ -21,7 +23,9 @@
         </div>
       </div>
     </div>
-    <div class="col-2 row flex-column additional-links">
+    <div
+      class="col-xl-2 col-md-3 d-flex align-items-md-baseline align-items-center flex-column additional-links mx-auto mb-md-0 mb-4"
+    >
       <p class="column-title mb-4">Customer Care</p>
       <a
         v-for="item in customerCare"
@@ -32,7 +36,9 @@
         {{ item }}
       </a>
     </div>
-    <div class="col-6 row flex-column additional-links">
+    <div
+      class="col-xl-6 col-md-4 d-flex align-items-md-baseline align-items-center text-center flex-column additional-links mx-auto mb-md-0 mb-4"
+    >
       <p class="column-title mb-4">Customer Care</p>
       <a
         v-for="item in stayInTouch"
@@ -42,6 +48,9 @@
       >
         {{ item }}
       </a>
+    </div>
+    <div class="border-top mt-5 pt-5 ps-0 mx-2">
+      <p class="copyright">© Copyright 2018 The Brand</p>
     </div>
   </div>
 </template>
@@ -87,5 +96,8 @@ const stayInTouch = ['Sign up to our Newsletter', 'Magazine Download']
   .column-item {
     color: var(--color-text-additional-links);
   }
+}
+.copyright {
+  color: var(--color-text-additional-links);
 }
 </style>

@@ -7,15 +7,18 @@
     <section id="hero" class="mx-3 py-5">
       <HeroWrapper />
     </section>
-    <section id="productDetails" class="container my-lg-5 py-5">
+    <section
+      id="productDetails"
+      class="container-fluid container-lg my-lg-5 py-3 py-md-5"
+    >
       <ProductDetails :details="data?.productDetails" />
     </section>
 
-    <section id="productSpecifications" class="container my-5 py-5">
+    <section id="productSpecifications" class="container my-lg-5 py-3 py-md-5">
       <ProductSpecifications :details="data?.productSpecifications" />
     </section>
 
-    <section id="relatedPieces" class="my-5 py-5 mx-3">
+    <section id="relatedPieces" class="my-lg-5 py-3 py-lg-5 mx-3">
       <RelatedProducts />
     </section>
   </main>

@@ -1,8 +1,14 @@
 <template>
-  <div class="container">
-    <div class="row justify-content-between">
-      <div class="col-7 ps-0 d-flex flex-column align-items-center">
-        <div class="col-10 mb-5">
+  <div class="container-fluid container-md">
+    <div
+      class="row flex-column flex-md-row justify-content-center justify-content-md-start align-items-center align-items-md-baseline"
+    >
+      <div
+        class="col-7 ps-0 pe-0 pe-md-1 d-flex flex-column align-items-lg-center"
+      >
+        <div
+          class="col-lg-10 mb-3 mb-md-5 align-self-baseline align-self-xl-center"
+        >
           <span class="category text-uppercase">Product Details</span>
           <h2>{{ details?.title }}</h2>
         </div>
@@ -12,7 +18,9 @@
           <DataList />
         </div>
       </div>
-      <div class="col-4 pe-0 text-end">
+      <div
+        class="col-7 col-md-3 col-lg-4 offset-md-0 offset-xl-1 pe-0 text-md-end my-auto ms-5"
+      >
         <img
           class="product bg-black"
           src="@/assets/img/product-detail.png"
@@ -31,10 +39,21 @@ defineProps<{ details?: Product['productDetails'] }>()
 
 <style lang="scss">
 .product {
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
 }
-.img {
-  width: 40px;
-  height: 40px;
+
+@media (max-width: 992px) {
+  .product {
+    max-width: 280px;
+    margin-left: -5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .product {
+    max-width: 220px;
+    margin-left: -3rem;
+  }
 }
 </style>

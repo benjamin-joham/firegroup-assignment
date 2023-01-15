@@ -1,38 +1,52 @@
 <!-- <template>
-  <section id="details">
-    <div class="container">
-      <div class="row">
-        <div class="col-4 ps-0">
-          <img
-            class="product bg-black"
-            src="@/assets/img/specification.png"
-            alt="Product Detail"
-          />
+  <div class="container-fluid container-md">
+    <div
+      class="row flex-column flex-md-row justify-content-center justify-content-md-start align-items-center align-items-md-baseline"
+    >
+      <div
+        class="col-7 ps-0 pe-0 pe-md-1 d-flex flex-column align-items-lg-center"
+      >
+        <div class="col-lg-10 mb-5">
+          <span class="category text-uppercase">Product Details</span>
+          <h2>{{ details?.title }}</h2>
         </div>
-        <div class="col-8 pe-0">
-          <div>
-            <span class="category">Specifications</span>
-            <h2>{{ details.title }}</h2>
-          </div>
-          <DataList :specifications="true" />
+        <div
+          class="row-expand justify-content-between align-self-baseline w-100"
+        >
+          <DataList />
         </div>
       </div>
+      <div
+        class="col-7 col-md-2 col-lg-4 offset-md-0 offset-xl-1 pe-0 text-md-end my-auto ms-5"
+      >
+        <img
+          class="product bg-black"
+          src="@/assets/img/product-detail.png"
+          alt="Product Detail"
+        />
+      </div>
     </div>
-  </section>
+  </div>
 </template> -->
 
 <template>
-  <div class="container">
-    <div class="row justify-content-between">
-      <div class="col-4 pe-0">
+  <div class="container-fluid container-md">
+    <div
+      class="row flex-column flex-md-row justify-content-center justify-content-md-start align-items-center align-items-md-baseline"
+    >
+      <div class="col-7 col-md-3 offset-1 col-lg-4 pe-0 my-auto me-md-5">
         <img
           class="product bg-black"
           src="@/assets/img/specification.png"
           alt="Product Detail"
         />
       </div>
-      <div class="col-7 ps-0 d-flex flex-column align-items-center">
-        <div class="col-10 mb-5">
+      <div
+        class="col-7 offset-lg-1 ps-0 pe-0 pe-md-1 d-flex flex-column align-items-lg-center order-first order-md-0"
+      >
+        <div
+          class="col-lg-10 mb-3 mb-md-5 align-self-baseline align-self-xl-center"
+        >
           <span class="category text-uppercase">Specifications</span>
           <h2>{{ details?.title }}</h2>
         </div>
@@ -54,10 +68,21 @@ defineProps<{ details?: Product['productSpecifications'] }>()
 
 <style lang="scss">
 .product {
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
 }
-.img {
-  width: 40px;
-  height: 40px;
+
+@media (max-width: 992px) {
+  .product {
+    max-width: 280px;
+    margin-left: -5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .product {
+    max-width: 220px;
+    margin-left: -3rem;
+  }
 }
 </style>

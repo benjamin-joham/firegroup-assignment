@@ -1,4 +1,4 @@
-import { reactive } from 'vue'
+import { reactive, type Ref } from 'vue'
 import products from '@/assets/data/products.json'
 import productPrices from '@/assets/data/price.json'
 
@@ -19,7 +19,8 @@ export interface State {
   getFormattedProductPrice: (sku: Product['sku']) => string
   getProductPrice: (sku: Product['sku']) => Price['price']
   getProduct: (sku: Product['sku']) => Product
-  thumbnails: string[]
+  thumbnails: string[],
+  handleResize: (className: Ref<string>) => void
 }
 
 const getPriceProduct = (sku: Product['sku']): Price => {
@@ -50,6 +51,13 @@ const thumbnails = reactive([
   'thumb_ultimate-02.png',
 ])
 
+const handleResize = (className: Ref<string>): string => {
+  console.log('resized')
+  return window.matchMedia('(max-width: 992px)').matches
+    ? 'container-fluid'
+    : 'container'
+}
+
 export const state = reactive<State>({
   products,
   productPrices,
@@ -62,4 +70,9 @@ export const state = reactive<State>({
   getProductPrice,
   getProduct,
   thumbnails,
+  handleResize(className: Ref<string>) {
+    className.value = window.matchMedia('(max-width: 992px)').matches
+      ? 'container-fluid'
+      : 'container'
+  },
 })

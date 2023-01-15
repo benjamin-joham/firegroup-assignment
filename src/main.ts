@@ -7,4 +7,10 @@ import './assets/style/main.scss'
 // import './scripts/slider.js'
 // import store from './store'
 
-createApp(App).mount('#app')
+createApp(App)
+.mount('#app')
+// .directive('scroll', {
+//     updated: (el, binding) => {
+//         console.log(binding.value)
+//     }
+// })

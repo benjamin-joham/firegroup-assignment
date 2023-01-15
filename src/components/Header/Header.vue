@@ -1,8 +1,8 @@
 <template>
   <SystemBar />
-  <!-- <NavBarVanilla />
-  <NavBarMobile /> -->
-  <NavBar />
+  <!-- <NavBarVanilla /> -->
+  <NavBarMobile />
+  <!-- <NavBar /> -->
 </template>
 
 <script setup lang="ts">

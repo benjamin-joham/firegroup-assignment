@@ -40,20 +40,20 @@ h2 {
   margin-bottom: 1em;
 }
 
-.data {
-  &-details {
-    &:nth-child(5),
-    &:nth-child(6) {
-      border-bottom: none !important;
-    }
-  }
-  &-specs {
-    &:nth-child(7),
-    &:nth-child(8) {
-      border-bottom: none !important;
-    }
-  }
-}
+// .data {
+//   &-details {
+//     &:nth-child(5),
+//     &:nth-child(6) {
+//       border-bottom: none !important;
+//     }
+//   }
+//   &-specs {
+//     &:nth-child(7),
+//     &:nth-child(8) {
+//       border-bottom: none !important;
+//     }
+//   }
+// }
 
 @media (max-width: 992px) {
     h1 {

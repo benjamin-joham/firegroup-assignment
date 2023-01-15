@@ -1,5 +1,5 @@
 <template>
-  <div :class="[viewPortClass]">
+  <div class="container-fluid container-lg">
     <div class="d-flex flex-column flex-md-row align-items-center">
       <div
         class="col-md-1 offset-md-1 offset-lg-0 h-100 ps-1 order-last order-md-0"
@@ -17,27 +17,15 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from 'vue'
+import { ref } from 'vue'
 import Thumbnails from './Thumbnails.vue'
 import MainImage from './MainImage.vue'
 import InfoBox from './InfoBox.vue'
 
-const viewPortClass = ref('')
 const active = ref(0)
 const setActive = (id: number) => {
   active.value = id
 }
-const handleResize = () => {
-  console.log('resized')
-  viewPortClass.value = window.matchMedia('(max-width: 992px)').matches
-    ? 'container-fluid'
-    : 'container'
-}
-onMounted(() => {
-  handleResize()
-  window.addEventListener('resize', handleResize)
-})
-onUnmounted(() => window.removeEventListener('resize', handleResize))
 </script>
 
 <style lang="ts"></style>
